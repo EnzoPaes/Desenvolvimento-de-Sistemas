@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+
+<body>
+    <script>
+        class Celular {
+            constructor(marca, modelo, armazenamento) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.armazenamento = armazenamento;
+            }
+            informacoesCelular() {
+                return (`marca ${this.marca}, modelo ${this.modelo}, ${this.armazenamento} GB armazenamento`);
+            }
+        }
+
+        let celular1 = new Celular(`Apple`, `Iphone 15 Pro Max`, 128);
+
+        console.log(`Informações: ${celular1.informacoesCelular()}.`);
+    </script>
+</body>
+
+</html>
