@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+
+<body>
+    <script>
+        class Carro {
+            constructor(marca, modelo, combustivel, consumo) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.combustivel = combustivel;
+                this.consumo = consumo;
+            }
+            abastecer() {
+                return (this.combustivel + 20);
+            }
+
+            dirigir() {
+                return (this.abastecer() - (120 / this.consumo));
+            }
+
+            exibirEstado() {
+                return (`Nível de combustível: ${this.dirigir()}L; Autonomia restante: ${this.dirigir() * this.consumo}km.`);
+            }
+        }
+
+        let carro1 = new Carro (`BMW`, `320i`, 10, 12);
+
+        console.log(carro1.exibirEstado());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+
+<body>
+    <script>
+        class CalculadoraIRRF {
+            constructor(salario) {
+                this.salario = salario;
+            }
+            calcularDescontoIRRF() {
+                if (this.salario <= 1903.98) {
+                    return(`Isento`)
+                } else if (this.salario <= 2826.65) {
+                    return(this.salario - (this.salario * 0.075)).toFixed(2);
+                } else if (this.salario <= 3751.05) {
+                    return(this.salario - (this.salario * 0.15)).toFixed(2);
+                } else if (this.salario <= 4664.68) {
+                    return(this.salario - (this.salario * 0.225)).toFixed(2);
+                } else if (this.salario > 4664.68) {
+                    return(this.salario - (this.salario * 0.275)).toFixed(2);
+                }
+            }
+        }
+
+        let salario1 = new CalculadoraIRRF(5000);
+
+        console.log(`Salário Bruto: R$${salario1.salario}; Salário Líquido: R$${salario1.calcularDescontoIRRF()}.`);
+    </script>
+</body>
+
+</html>
